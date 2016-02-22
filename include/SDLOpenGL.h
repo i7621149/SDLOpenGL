@@ -13,6 +13,10 @@ public :
             int _width,
             int _height);
 
+  //making our context active
+  void makeCurrent() const { SDL_GL_MakeCurrent(m_window, m_gl_context); }
+  void swapWindow() const { SDL_GL_SwapWindow(m_window); }
+
 private :
   int m_x;
   int m_y;
