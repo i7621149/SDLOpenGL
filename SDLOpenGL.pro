@@ -14,3 +14,5 @@ LIBS+=$$system(sdl2-config --libs) #libraries for sdl, taken from system command
 
 include($(HOME)/NGL/UseNGL.pri) #includes this in the project, it's some kind of NGL helper thing maybe?
 
+OTHER_FILES+=README.md \
+           ./shaders/*.glsl

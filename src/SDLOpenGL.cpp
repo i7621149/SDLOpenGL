@@ -55,3 +55,9 @@ void SDLOpenGL::errorExit(const std::string &_msg) const
   SDL_Quit();
   exit(EXIT_FAILURE);
 }
+
+void SDLOpenGL::pollEvent(SDL_Event &_event)
+{
+  makeCurrent();
+  SDL_PollEvent(&_event);
+}

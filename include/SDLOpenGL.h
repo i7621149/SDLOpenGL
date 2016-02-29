@@ -15,7 +15,8 @@ public :
 
   //making our context active
   void makeCurrent() const { SDL_GL_MakeCurrent(m_window, m_gl_context); }
-  void swapWindow() const { SDL_GL_SwapWindow(m_window); }
+  void swapWindow() const { SDL_GL_SwapWindow(m_window); } //this updates the window
+  void pollEvent(SDL_Event &_event);
 
 private :
   int m_x;
